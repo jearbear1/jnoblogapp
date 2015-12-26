@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="jnoblogwebapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-bs-HK4">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="abm-KV-P7h">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="63E-ov-MgR">
+                                            <connections>
+                                                <action selector="goBack:" destination="BYZ-38-t0r" id="uo0-SK-F53"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="fGP-BM-cgr">
+                                            <connections>
+                                                <action selector="goForward:" destination="BYZ-38-t0r" id="dac-JK-TjI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HA0-nU-tKI">
+                                <rect key="frame" x="0.0" y="72" width="320" height="452"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HA0-nU-tKI" firstAttribute="top" secondItem="ilM-bs-HK4" secondAttribute="bottom" id="2SS-fO-E5z"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HA0-nU-tKI" secondAttribute="bottom" id="BMU-7f-C7g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ilM-bs-HK4" secondAttribute="trailing" constant="-20" id="CQP-p2-7IX"/>
+                            <constraint firstItem="ilM-bs-HK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="IZf-YA-MQk"/>
+                            <constraint firstItem="HA0-nU-tKI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Ize-mt-kbY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HA0-nU-tKI" secondAttribute="trailing" constant="-20" id="VUx-b3-Jcw"/>
+                            <constraint firstItem="ilM-bs-HK4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="n1a-fe-nxy"/>
+                            <constraint firstItem="HA0-nU-tKI" firstAttribute="top" secondItem="ilM-bs-HK4" secondAttribute="bottom" id="szs-ix-DCJ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="HA0-nU-tKI" id="5xq-Rq-QHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="363"/>
+        </scene>
+    </scenes>
+</document>
